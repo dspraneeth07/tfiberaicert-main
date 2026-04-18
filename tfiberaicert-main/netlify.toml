@@ -1,13 +1,18 @@
 [build]
   command = "npm install && npm run build"
-  publish = "dist/client"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22.0.0"
   NODE_ENV = "production"
   FORCE_COLOR = "1"
 
-# SPA fallback is handled by public/_redirects file
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 [[headers]]
   for = "/assets/*"
   [headers.values]
