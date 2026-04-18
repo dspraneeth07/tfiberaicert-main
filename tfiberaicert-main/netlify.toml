@@ -5,19 +5,9 @@
 [build.environment]
   NODE_VERSION = "22.0.0"
   NODE_ENV = "production"
-  NPM_FLAGS = "--prefer-offline"
   FORCE_COLOR = "1"
 
-[dev]
-  command = "npm run dev"
-  port = 5173
-
-# SPA fallback — every URL serves index.html so client-side routes work on refresh / direct visit.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
+# SPA fallback is handled by public/_redirects file
 [[headers]]
   for = "/assets/*"
   [headers.values]
