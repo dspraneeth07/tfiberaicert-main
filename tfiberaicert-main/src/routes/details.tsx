@@ -172,7 +172,7 @@ function DetailsPage() {
                   value={form[f.key]}
                   onChange={(e) => update(f.key, e.target.value)}
                   placeholder=" "
-                  aria-invalid={!!errors[f.key]}
+                  aria-invalid={errors[f.key] ? "true" : "false"}
                 />
                 <label htmlFor={f.key}>{f.label}</label>
               </div>
