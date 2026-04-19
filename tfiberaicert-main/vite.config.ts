@@ -17,6 +17,11 @@ export default defineConfig({
       cssCodeSplit: false,
       minify: "terser",
       sourcemap: false,
+      outDir: "dist/client",
+      emptyOutDir: true,
+      rollupOptions: {
+        input: "index.html",
+      },
     },
   },
 });
